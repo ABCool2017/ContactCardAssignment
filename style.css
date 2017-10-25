@@ -1,0 +1,19 @@
+body {
+  display: inline-block;
+
+}
+
+body form {
+  width: 212px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+  text-align: left;
+}
+  body form input {
+    margin-bottom: 5px;
+  }
+
+  body form textarea {
+    margin-top: 5px;
+  }
