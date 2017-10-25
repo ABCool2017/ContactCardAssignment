@@ -1,5 +1,7 @@
+
 body {
   display: inline-block;
+  height: 240px;
 
 }
 
@@ -16,4 +18,22 @@ body form {
 
   body form textarea {
     margin-top: 5px;
+
+  }
+
+div {
+/*  display: inline-block; */
+  width: 250px;
+  padding: 10px;
+  border: 2px solid black;
+  text-align: center;
+  margin: 5px;
+}
+  div h1 a {
+    display: inline-block;
+  }
+  div p {
+    font-family: "Arial";
+    font-size: 10pt;
+    font-weight: normal;
   }

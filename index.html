@@ -11,21 +11,41 @@
     </script>
     <script>
       $(document).ready(function(){
+        $('form').submit(function(event){
+          event.preventDefault();
+        //  console.log("Hello");
+          var firstname = $('input[name="first_name"]').val()
+          var lastname = $('input[name="last_name"]').val()
+
+          var description = $('textarea[name="description"]').val()
+
+          $('body').append("<div class='newUser'>"+"<h1>"+firstname+" "+lastname+"<a href=''>Click here for Description</a>"+"</h1>"+"</div>")
+
+          $('input[name="first_name"]').val("");
+          $('input[name="last_name"]').val("");
+          $('textarea[name="description"]').val("");
 
 
 
+            $(document).on("click", "a", function(event){  //click to hide link for description
+              event.preventDefault();
+
+              $(this).hide();
+
+              $(".newUser").append("<p>"+description+"</p>");
+
+            });
+
+        });
 
       });
-
-
     </script>
   </head>
   <body>
     <form>
       First Name: <input type="text" name="first_name">
       Last Name: <input type="text" name="last_name">
-      Description: <textarea name="description" rows="10" cols="30">
-      Enter Description</textarea>
+      Description: <textarea name="description" rows="10" cols="30"></textarea>
       <input type="submit" value="Add User">
     </form>
 
