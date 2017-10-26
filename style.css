@@ -33,6 +33,7 @@ div {
     display: inline-block;
   }
   div p {
+    display: none;
     font-family: "Arial";
     font-size: 10pt;
     font-weight: normal;

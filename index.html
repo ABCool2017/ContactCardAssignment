@@ -16,26 +16,24 @@
         //  console.log("Hello");
           var firstname = $('input[name="first_name"]').val()
           var lastname = $('input[name="last_name"]').val()
-
           var description = $('textarea[name="description"]').val()
+          var newUser = $('input[name="first_name"]').val() + $('input[name="last_name"]').val()
 
-          $('body').append("<div class='newUser'>"+"<h1>"+firstname+" "+lastname+"<a href=''>Click here for Description</a>"+"</h1>"+"</div>")
+          $('body').append("<div class="+newUser+">"+"<h1>"+firstname+" "+lastname+"<a href=''>Click here for Description</a>"+"<p>"+description+"</p>"+"</h1>"+"</div>")
 
           $('input[name="first_name"]').val("");
           $('input[name="last_name"]').val("");
           $('textarea[name="description"]').val("");
-
-
 
             $(document).on("click", "a", function(event){  //click to hide link for description
               event.preventDefault();
 
               $(this).hide();
 
-              $(".newUser").append("<p>"+description+"</p>");
+              $('p').show();
 
             });
-
+        //  $("div p").hide();
         });
 
       });
