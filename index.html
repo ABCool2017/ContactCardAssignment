@@ -25,12 +25,12 @@
           $('input[name="last_name"]').val("");
           $('textarea[name="description"]').val("");
 
-            $(document).on("click", "a", function(event){  //click to hide link for description
+            $(document).on("click", '.'+newUser+" a", function(event){  //click to hide link for description
               event.preventDefault();
 
               $(this).hide();
 
-              $('p').show();
+              $('.'+newUser+" h1 p").show();
 
             });
         //  $("div p").hide();
